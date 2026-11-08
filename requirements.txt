@@ -4,6 +4,8 @@ mlxtend
 numpy
 openpyxl
 pandas
+plotly
 psutil
 scikit-learn
 seaborn
+streamlit

@@ -8,6 +8,7 @@ una proyección de demanda y reabastecimiento (Track 3).
 
 ```text
 .
+├── app.py                           # Dashboard para Track 1 y Track 3
 ├── data/
 │   ├── raw/                         # Archivos fuente; no modificarlos
 │   │   └── originals/               # Copias archivadas de algunos originales
@@ -91,6 +92,20 @@ ejecuta todas las celdas. El notebook estima la demanda del siguiente mes y
 calcula las unidades sugeridas para compra. Actualmente, las compras
 históricas de este track se simulan a partir de las ventas; no provienen de un
 modelo de compras real.
+
+### 6. Dashboard opcional
+
+Desde la raíz del proyecto, ejecuta:
+
+```powershell
+streamlit run app.py
+```
+
+El dashboard carga por defecto `INVENTARIO_PRODUCTOS_LIMPIO.csv` y
+`ventas_limpia.csv` desde `data/processed/`. La pestaña de reabastecimiento
+aplica Track 3 por categoría y referencia. Si actualizas los datos, puedes
+cargar en la barra lateral los CSV limpios de inventario y/o ventas; estos
+reemplazan los archivos locales durante esa sesión.
 
 ## Organización de los datos
 
