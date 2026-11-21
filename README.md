@@ -83,8 +83,16 @@ En VS Code, selecciona el intérprete `.venv` como kernel de cada notebook.
    python -m jupyter nbconvert --to notebook --execute --inplace 02_etl_y_track1.ipynb track2.ipynb Track3.ipynb
    ```
 
-4. **Dashboard:** `streamlit run app.py`. En la barra lateral se pueden cargar
-   versiones nuevas del inventario, las ventas o las compras.
+4. **Dashboard:** desde la carpeta del proyecto, con el entorno virtual activado:
+
+   ```powershell
+   .\.venv\Scripts\Activate.ps1
+   python -m streamlit run app.py
+   ```
+
+   Se abre en el navegador, en `http://localhost:8501`; para cerrarlo, presiona `Ctrl + C`.
+   La primera vez Streamlit pide un correo: presiona Enter para omitirlo.
+   En la barra lateral se pueden cargar versiones nuevas del inventario, las ventas o las compras.
 
 ## Decisiones de método
 
